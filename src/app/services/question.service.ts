@@ -37,7 +37,17 @@ export class QuestionService {
         label: 'Email',
         type: 'email',
         order: 2
-      })
+      }),
+      new DropdownQuestion({
+        key: 'brave',
+        label: 'What is Gizem\'s favorite team?',
+        options: [
+          {key: 'gs',  value: 'Galatasaray'},
+          {key: 'fb',  value: 'Fenerbahçe'},
+          {key: 'bjk',   value: 'Beşiktaş' }
+        ],
+        order: 4
+      }),
     ];
     return questions.sort((a, b) => a.order - b.order);
   }
