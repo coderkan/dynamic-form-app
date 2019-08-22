@@ -1,12 +1,14 @@
 
 <div class="col-md-12" style="text-align: center" >
     <form class="col-md-6 offset-md-3" (ngSubmit)="onSubmit()" [formGroup]="form">
-        <div *ngFor="let question of questions" class="form-row" >
-            <app-question [question]="question" [form]="form" ></app-question>
-        </div>
-        <br/>
-        <div class="form-row">
-            <button  class="btn btn-primary btn-block" type="submit" [disabled]="!form.valid">Save</button>
+        <div class="form-group">
+            <div *ngFor="let question of questions" class="form-row" >
+                <app-question [question]="question" [form]="form" ></app-question>
+            </div>
+            <br/>
+            <div class="form-row">
+                <button  class="btn btn-primary btn-block" type="submit" [disabled]="!form.valid">Save</button>
+            </div>
         </div>
     </form>
     <div *ngIf="payLoad" class="form-row">
