@@ -1,9 +1,16 @@
 <!--The content below is only a placeholder and can be replaced.-->
 
 
-<div class="container" style="text-align: center">
+<div class="container w-100" style="text-align: center">
   <h2 style="text-align: center">Dynamic Question Form App</h2>
-  <app-dynamic-form [questions]="questions"></app-dynamic-form>
+  <div class="row w-100">
+    <div class="col-md-6 border border-primary">
+      <app-dynamic-form [questions]="questions"></app-dynamic-form>
+    </div>
+    <div class="col-md-6 border border-secondary">
+      <app-crud-form></app-crud-form>
+    </div>
+  </div>
 </div>
 
 <router-outlet></router-outlet>
